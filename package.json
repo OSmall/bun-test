@@ -12,6 +12,7 @@
     "start": "bun run index.ts"
   },
   "dependencies": {
+    "react": "^18.2.0",
     "zod": "^3.22.2"
   }
 }
