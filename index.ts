@@ -16,10 +16,11 @@ console.log("Hello via Bun!");
  * Testing options object design pattern
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters#destructured_parameter_with_default_value_assignment}
 */
-function foo(id: string, { displayName = id } = {}) {
+function foo(id: string, { displayName = id, type = 'left' }: { displayName?: string, type?: 'left' | 'right' } = {}) {
     displayName = displayName.replace('or', 'i');
+    console.log(type);
     console.log(displayName);
 }
 
 foo('hello');
-foo('hello', { displayName: 'world' });
+foo('hello', { displayName: 'world', type: 'right' });
